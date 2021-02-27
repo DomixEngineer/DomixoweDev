@@ -9,6 +9,7 @@
     @include('website.parts.fullpage_slides.contact')
 </div>
 
+<script src="{{ asset('assets/js/axios.min.js') }}"></script>
 <script src="{{ asset('assets/js/vue.js') }}"></script>
 <script src="{{ asset('assets/js/fullpage.min.js') }}"></script>
 <script src="{{ asset('assets/js/fullpage.extensions.min.js') }}"></script>

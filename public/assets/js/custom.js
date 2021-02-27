@@ -282,10 +282,21 @@ var app = new Vue({
 			{
 				return true;
 			}
+		},
+		getSkills() {
+			console.log('Pobieram umiejętności');
+			axios.get('http://10.0.0.10/skills')
+				.then(function(data) {
+					console.log(data);
+				});
+		},
+		getSkillsByCategory(category) {
+			console.log('Pobieram umiejętności na podstawie kategorii ' + category);
 		}
 	},
 	mounted: function() {
 		this.setCategory('all');
+		this.getSkills();
 	}
 });
 

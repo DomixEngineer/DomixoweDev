@@ -6,7 +6,7 @@
             </div>
             <div class="contact-container">
                 <div class="contact-container-left">
-                    <h4 class="contact-container-left-heading">Dane kontaktowe</h4>
+                    <h4 class="contact-container-left-heading">Dane kontaktowe</h4>  
                     <!-- <p class="contact-container-left-singleData">
                         <span class="contact-container-left-singleData-icon">
                             <img src="{{ asset('assets/images/main/phone-icon.png') }}" class="" alt="domixowe.dev numer kontnaktowy">
