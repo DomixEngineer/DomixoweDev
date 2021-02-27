@@ -1,0 +1,1372 @@
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('/assets/fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Hairline";
+    src: url('/assets/fonts/Lato-Hairline.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url('/assets/fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url('/assets/fonts/Lato-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: url('/assets/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Thin";
+    src: url('/assets/fonts/Lato-Thin.ttf');
+}
+
+@font-face {
+    font-family: "Kelson-Bold";
+    src: url('/assets/fonts/KelsonSans-Bold.ttf');
+}
+
+// Blokada landscape
+// @media screen and (min-width: 0px) and (max-width: 1200px) and (orientation: landscape) {
+//     html {
+//       transform: rotate(-90deg);
+//       transform-origin: left top;
+//       width: 100vh;
+//       overflow-x: hidden;
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//     }
+// }
+
+$latoRegular: 'Lato-Regular';
+$latoLight: 'Lato-Light';
+$latoBold: 'Lato-Bold';
+$latoThin: 'Lato-Thin';
+$latoHairline: 'Lato-Hairline';
+$kelsonBold: 'Kelson-Bold';
+
+$xs: 320px;
+$xsBreakpoint: 321px;
+$smBreakpoint: 479px;
+$sm: 480px;
+$mdBreakpoint: 767px;
+$md: 768px;
+$lgBreakpoint: 1199px;
+$lg: 1200px;
+$xlBreakpoint: 1499px;
+$xl: 1500px;
+$landScapePortrait: 830px;
+
+.mainContainer {
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 1280px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    &-right {
+        .menu {
+            list-style-type: none;
+            display: flex;
+            font-family: $kelsonBold;
+            color: white;
+            font-size: 26px;
+            margin: 0;
+            .menu-item {
+                margin-right: 5px;
+                margin-left: 5px;
+                &-link {
+                    color: white;
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+}
+
+.navbar.desktop {
+    @media (max-width: $lgBreakpoint)
+    {
+        display: none;
+    }
+}
+
+.start {
+    background-image: url('/assets/images/main/start-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .mainContainer {
+        @media (min-width: $md) and (max-width: $lgBreakpoint) {
+            max-width: 860px;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape)
+        {
+            max-width: 85vw;
+        }
+    }
+    &-left {
+        width: 60%;
+        top: 43%;
+        left: 2%;
+        position: relative;
+        @media (max-width: $xs) {
+            width: 100%;
+            top: 6vh;
+            left: 0;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            width: 100%;
+            top: 6vh;
+            left: 0;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            width: 100%;
+            top: 6vh;
+            left: 0;
+        }
+        @media (min-width: $md) and (max-width: $lgBreakpoint)
+        {
+            top: 12vh;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape)
+        {
+            top: 20vh;
+        }
+        &-sentence {
+            font-family: $latoRegular;
+            color: white;
+            text-transform: uppercase;
+            font-size: 50px;
+            margin-bottom: 32px;
+            margin-top: 0;
+            @media (max-width: $xs) {
+                font-size: 12vw;
+                text-align: center;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                font-size: 12vw;
+                text-align: center;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                font-size: 8vw;
+                text-align: center;
+            }
+            @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                font-size: 5vw;
+            }
+            @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape)
+            {
+                font-size: 4vw;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+            b {
+                font-family: $latoBold;
+            }
+        }
+        &-role {
+            background-color: #fff222;
+            width: 411px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: $xs) {
+                width: 80%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 3px;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                width: 80%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 3px;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                width: 60%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 3px;
+            }
+            @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape)
+            {
+                margin-left: 0;
+            }
+            &-text {
+                color: black;
+                font-family: $kelsonBold;
+                font-size: 35px;
+                text-transform: uppercase;
+                @media (max-width: $xs) {
+                    font-size: 8vw;
+                    text-align: center;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    font-size: 8vw;
+                    text-align: center;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 6vw;
+                    text-align: center;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &-right {
+        &-person {
+            position: absolute;
+            bottom: 0;
+            right: 3%;
+            @media (max-width: $xs) {
+                width: 75%;
+                bottom: -2vh;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                max-width: 300px;
+                width: 100%;
+                bottom: -2vh;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                max-width: 300px;
+                width: 100%;
+                bottom: -2vh;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+            }
+            @media (min-width: $md) and (max-width: $lgBreakpoint)
+            {
+                max-width: 450px;
+            }
+            @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape)
+            {
+                max-width: 35vw;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.about {
+    background-color: #dae0e2;
+    .mainContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @media (max-width: $xs) {
+            display: block;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            display: block;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            display: block;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape)
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        @media (min-width: 768px) and (max-width: $landScapePortrait) and (orientation: landscape) {
+        }
+    }
+    &-left {
+        width: 36%;
+        @media (max-width: $xs) {
+            width: 100%;
+            margin-top: 20px;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            width: 100%;
+            margin-top: 20px;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            width: 100%;
+            margin-top: 20px;
+        }
+        @media (min-width: $md) and (max-width: $lgBreakpoint) {
+            max-width: 390px;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+            width: 40%;
+        }
+        @media (min-width: 768px) and (max-width: $landScapePortrait) and (orientation: landscape) {
+            width: 30%;
+        }
+        &-avatar {
+            &-image {
+                @media (max-width: $xs) {
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    width: 30%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    width: 100%;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    width: 90%;
+                }
+            }
+        }
+        &-decorator {
+            float: right;
+            margin-top: 20px;
+            @media (max-width: $xs) {
+                display: none;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                display: none;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                display: none;
+            }
+            @media (min-width: 768px) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                display: none;
+            }
+        }
+    }
+    &-right {
+        width: 55%;
+        margin-top: -15%;
+        @media (max-width: $xs) {
+            width: 90%;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            width: 90%;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            width: 90%;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: $md) and (max-width: $lgBreakpoint) {
+            margin-top: 50px;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+            width: 60%;
+        }
+        &-top {
+            display: flex;
+            @media (max-width: $xs) {
+                display: block;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                display: block;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                display: block;
+            }
+            &-header {
+                font-family: $latoRegular;
+                font-size: 50px;
+                font-weight: 100;
+                margin-bottom: 46px;
+                margin-top: 0;
+                position: relative;
+                z-index: 1;
+                @media (max-width: $xs) {
+                    font-size: 10vw;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    font-size: 10vw;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 7vw;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    font-size: 6vw;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    text-align: left;
+                    font-size: 5vw;
+                }
+                @media (min-width: 768px) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    margin-bottom: 12px;
+                }
+                b {
+                    font-family: $latoBold;
+                }
+                &::after {
+                    content: '';
+                    width: 350px;
+                    height: 30px;
+                    background-color: #fff222;
+                    position: absolute;
+                    left: 4px;
+                    bottom: 0;
+                    z-index: -1;
+                    @media (max-width: $xs) {
+                        width: 75%;
+                        height: 2vh;
+                        left: 12vw;
+                    }
+                    @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                        width: 75%;
+                        height: 2vh;
+                        left: 12vw;
+                    }
+                    @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                        width: 50%;
+                        height: 2vh;
+                        left: 22vw;
+                    }
+                    @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                        width: 60%;
+                        height: 2vh;
+                        left: 0vw;
+                    }
+                }
+            }
+        }
+        &-bottom {
+            @media (max-width: $xs) {
+                height: 260px;
+                overflow: auto;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                height: 290px;
+                overflow: auto;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                height: 42vh;
+                overflow: auto;
+            }
+            &-text {
+                margin-top: 0;
+                font-family: $latoRegular;
+                font-size: 21px;
+                @media (max-width: $xs) {
+                    font-size: 4.5vw;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    font-size: 4.5vw;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 3vh;
+                }
+                @media (min-width: 768px) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.workshop {
+    .blockAlignCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainContainer {
+        height: 80%;
+        @media (max-width: $xs) {
+            height: 100%;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            height: 100%;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+            margin-top: -5vh;
+        }
+    }
+    &-heading {
+        &-header {
+            font-family: $latoBold;
+            font-size: 60px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            @media (max-width: $xs) {
+                font-size: 10vw;
+                margin-top: 3vh;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                font-size: 10vw;
+                margin-top: 3vh;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                margin-bottom: 10px;
+                font-size: 8vw;
+            }
+            @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                margin-bottom: 10px;
+                font-size: 6vw;
+            }
+            @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                margin-bottom: 10px;
+                font-size: 4vw;
+            }
+            &::before {
+                content: '';
+                width: 105%;
+                height: 14px;
+                background-color: #fff222;
+                position: absolute;
+                left: 4px;
+                bottom: 12px;
+                z-index: -1;
+                @media (max-width: $xs) {
+                    width: 100%;
+                    height: 1vh;
+                    bottom: 1vh;
+                    left: 0;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    width: 100%;
+                    height: 1vh;
+                    bottom: 1vh;
+                    left: 0;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    width: 105%;
+                    height: 2vh;
+                    bottom: 1vh;
+                    left: 0.3vw;
+                }
+            }
+            &::after {
+                content: '';
+                background-image: url('/assets/images/main/rocket.png');
+                position: absolute;
+                background-size: contain;
+                width: 57px;
+                height: 65px;
+                top: -17px;
+                right: -70px;
+                background-repeat: no-repeat;
+                @media (max-width: $xs) {
+                    display: none;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    display: none;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    width: 9vw;
+                    height: 9vw;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    width: 5vw;
+                    height: 5vw;
+                    right: -6vw;
+                    top: -2vh;
+                }
+            }
+        }
+    }
+    &-categories {
+        &-menu {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            @media (max-width: $xs) {
+                display: flex;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                display: flex;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            &-singleCategory {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                font-family: $latoRegular;
+                font-size: 34px;
+                padding-left: 15px;
+                padding-right: 15px;
+                transform: scale(1);
+                transition: transform 0.5s;
+                @media (max-width: $xs) {
+                    margin-bottom: 20px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    margin-bottom: 20px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 25px;
+                }
+                @media (min-width: $sm) and (max-width: 501px) {
+                    margin-bottom: 10px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 3.3vw;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    font-size: 3.3vw;
+                }
+                &:hover {
+                    transform: scale(1.2);
+                    transition: transform 0.5s;
+                }
+                &-category {
+                    margin: 0;
+                    @media (max-width: $xs) {
+                        font-size: 7vw;
+                    }
+                    @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                        font-size: 7vw;
+                    }
+                }
+            }
+            &-singleCategory.active {
+                &::after {
+                    content: '';
+                    width: 60px;
+                    height: 6px;
+                    background-color: #0a79df;
+                    position: absolute;
+                    left: 20px;
+                    bottom: -8px;
+                }
+            }
+        }
+    }
+    &-skills {
+        margin-top: 40px;
+        max-width: 822px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        margin-left: auto;
+        margin-right: auto;
+        @media (max-width: $xs) {
+            max-width: 90%;
+            overflow: auto;
+            margin-left: auto;
+            margin-right: auto;
+            grid-column-gap: 7%;
+            grid-template-columns: repeat(8, 40%);
+            margin-top: 10px;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            max-width: 90%;
+            overflow: auto;
+            margin-left: auto;
+            margin-right: auto;
+            grid-column-gap: 7%;
+            grid-template-columns: repeat(8, 40%);
+            margin-top: 10px;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+            max-width: 90%;
+            overflow: scroll;
+            margin-left: auto;
+            margin-right: auto;
+            grid-column-gap: 0%;
+            grid-template-columns: repeat(10, 25%);
+            margin-top: 24px;
+        }
+        &-singleSkill {
+            &-till {
+                background-color: #ffffff;
+                width: 104px;
+                height: 104px;
+                box-shadow: 0px 10px 27.84px 4.16px rgba(0, 0, 0, 0.16);
+                text-shadow: 0px 10px 27.84px rgba(0, 0, 0, 0.16);
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transform: scale(1);
+                transition: transform 0.5s;
+                @media (max-width: $xs) {
+                    height: 70px;
+                    width: 70px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    height: 90px;
+                    width: 90px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    width: 80px;
+                    height: 80px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    width: 90px;
+                    height: 90px;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    width: 60px;
+                    height: 60px;
+                }
+                &:hover {
+                    transform: scale(1.2);
+                    transition: transform 0.5s;
+                }
+                &-image {
+                    max-width: 50px;
+                    width: 100%;
+                    @media (max-width: $xs) {
+                        max-width: 35px;
+                    }
+                    @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                        max-width: 35px;
+                    }
+                    @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                        max-width: 40px;
+                    }
+                    @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                        max-width: 40px;
+                    }
+                    @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                        max-width: 27px;
+                    }
+                }
+                .vagrant {
+                    max-width: 100px;
+                }
+                .angularjs {
+                    max-width: 60px;
+                }
+            }
+            &-title {
+                font-family: $latoThin;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.experience {
+    .mainContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-company {
+        display: flex;
+        @media (max-width: $xs) {
+            display: block;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            display: block;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            display: block;
+        }
+        &-left {
+            margin-right: 50px;
+            @media (max-width: $xs) {
+                margin-right: 0;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                margin-right: 0;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                margin-right: 0;
+            }
+            &-circle {
+                width: 245px;
+                height: 245px;
+                border-radius: 100%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 8px 26.8px 13.2px rgba(0, 0, 0, 0.47);
+                text-shadow: 0px 8px 26.8px rgba(0, 0, 0, 0.47);
+                @media (max-width: $xs) {
+                    width: 150px;
+                    height: 150px;
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img { width: 60%; }
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    width: 150px;
+                    height: 150px;
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img { width: 60%; }
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    width: 27vw;
+                    height: 27vw;
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img { width: 60%; }
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    width: 22vw;
+                    height: 22vw;
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img { width: 50%; }
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    width: 22vw;
+                    height: 22vw;
+                    display: flex;
+                    margin-left: auto;
+                    margin-right: auto;
+                    img { width: 50%; }
+                }
+            }
+        }
+        &-right {
+            &-companyTitle {
+                color: white;
+                font-family: $latoBold;
+                font-size: 84px;
+                margin: 0;
+                @media (max-width: $xs) {
+                    font-size: 40px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    font-size: 40px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 11vw;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    font-size: 7vw;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    font-size: 7vw;
+                }
+            }
+            &-singleData {
+                color: white;
+                font-family: $latoRegular;
+                margin: 0;
+                font-size: 32px;
+                b {
+                    font-family: $latoBold;
+                }
+                @media (max-width: $xs) {
+                    font-size: 20px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    font-size: 20px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 20px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    .maxsote {
+        background-image: url('/assets/images/main/slide1-bg.png');
+    }
+    .arris {
+        background-image: url('/assets/images/main/slide2-bg.png');
+    }
+    .medforum {
+        background-image: url('/assets/images/main/slide3-bg.png');
+    }
+    .linkhouse {
+        background-image: url('/assets/images/main/slide4-bg.png');
+    }
+    .maxsote, .arris, .medforum, .linkhouse {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.contact {
+    background-color: #2b2c2c;
+    .blockAlignCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-heading {
+        display: flex;
+        justify-content: center;
+        &-header {
+            text-transform: uppercase;
+            color: white;
+            font-size: 60px;
+            font-family: $latoBold;
+            position: relative;
+            z-index: 1;
+            @media (max-width: $xs) {
+                font-size: 30px;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                font-size: 30px;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                font-size: 30px;
+            }
+            @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                font-size: 30px;
+            }
+            @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                font-size: 23px;
+            }
+            &::before {
+                content: '';
+                width: 115%;
+                height: 10px;
+                background-color: #fff222;
+                position: absolute;
+                left: 4px;
+                bottom: 13px;
+                z-index: -1;
+                @media (max-width: $xs) {
+                    left: 0px;
+                    bottom: 0px;
+                    height: 5px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    left: 0px;
+                    bottom: 0px;
+                    height: 5px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    left: 0px;
+                    bottom: 0px;
+                    height: 5px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    left: 0px;
+                    bottom: 0px;
+                    height: 5px;
+                }
+            }
+            &::after {
+                content: '';
+                // background-image: url('../images/light-icon.png');
+                background-repeat: no-repeat;
+                position: absolute;
+                right: -70px;
+                top: -30px;
+                width: 66px;
+                height: 70px;
+                @media (max-width: $xs) {
+                    background-size: contain;
+                    right: -40px;
+                    top: -13px;
+                    width: 40px;
+                    height: 42px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    background-size: contain;
+                    right: -40px;
+                    top: -13px;
+                    width: 40px;
+                    height: 42px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    background-size: contain;
+                    right: -40px;
+                    top: -13px;
+                    width: 40px;
+                    height: 42px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    background-size: contain;
+                    right: -40px;
+                    top: -13px;
+                    width: 40px;
+                    height: 42px;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                    right: -33px;
+                    top: -13px;
+                    width: 31px;
+                    height: 33px;
+                }
+            }
+        }
+    }
+    &-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @media (max-width: $xs) {
+            display: block;
+        }
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            display: block;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            display: block;
+        }
+        @media (min-width: $md) and (max-width: $lgBreakpoint) {
+            display: block;
+        }
+        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+            display: flex;
+        }
+        &-left {
+            &-heading {
+                color: #ffffff;
+                font-size: 30px;
+                font-family: $latoRegular;
+                margin-top: 0;
+                @media (max-width: $xs) {
+                    font-size: 20px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    font-size: 20px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    font-size: 20px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    font-size: 28px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+            &-singleData {
+                display: flex;
+                align-items: center;
+                @media (max-width: $xs) {
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    justify-content: center;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    justify-content: center;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    justify-content: center;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    justify-content: center;
+                }
+                @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                }
+                &-icon {
+                    img {
+                        @media (max-width: $xs) {
+                            width: 70%;
+                        }
+                        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                            width: 100%;
+                        }
+                        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                            width: 100%;
+                        }
+                        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                            display: none;
+                        }
+                    }
+                }
+                &-text {
+                    margin-left: 10px;
+                    font-size: 23px;
+                    font-family: $latoRegular;
+                    color: #727b86;
+                    @media (max-width: $xs) {
+                        font-size: 15px;
+                    }
+                    @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                        font-size: 20px;
+                    }
+                    @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                        font-size: 20px;
+                    }
+                    @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        &-right {
+            margin-left: 90px;
+            @media (max-width: $xs) {
+                margin-left: 0;
+                width: 100%;
+            }
+            @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                margin-left: 0;
+                width: 100%;
+            }
+            @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                margin-left: 0;
+                width: 100%;
+            }
+            @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+            &-form {
+                max-width: 730px;
+                width: 100%;
+                @media (max-width: $xs) {
+                    max-width: 90%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                    max-width: 90%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                    max-width: 90%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                    max-width: 90%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                &-row {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                    @media (max-width: $xs) {
+                        margin-bottom: 10px;
+                    }
+                    @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                        margin-bottom: 10px;
+                    }
+                    .long-col {
+                        width: 100%;
+                    }
+                    .short-col {
+                        width: 47%;
+                    }
+                    div {}
+                    &-input {
+                        background-color: #363737;
+                        border: 0;
+                        font-size: 30px;
+                        font-family: $latoLight;
+                        color: #777777;
+                        padding-left: 40px;
+                        padding-top: 26px;
+                        padding-bottom: 26px;
+                        border-radius: 10px;
+                        box-sizing: border-box;
+                        width: 100%;
+                        resize: none;
+                        @media (max-width: $xs) {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            padding-left: 20px;
+                            font-size: 17px;
+                        }
+                        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            padding-left: 20px;
+                            font-size: 17px;
+                        }
+                        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            padding-left: 20px;
+                            font-size: 17px;
+                        }
+                        @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                            padding-top: 18px;
+                            padding-bottom: 18px;
+                            padding-left: 20px;
+                            font-size: 20px;
+                        }
+                        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                            padding-left: 20px;
+                            font-size: 17px;
+                        }
+                    }
+                    &-input.long {
+                        width: 100%;
+                    }
+                    &-input.short {
+                        width: 100%;
+                    }
+                    &-error {
+                        color: #E71C23;
+                        font-family: $latoThin;
+                        margin-top: 5px;
+                        margin-bottom: 2px;
+                        @media (max-width: $xs) {
+                            font-size: 11px;
+                        }
+                        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                            font-size: 11px;
+                        }
+                        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                            font-size: 11px;
+                        }
+                    }
+                    &-sendBtn {
+                        background-color: #f3b63a;
+                        border: 0;
+                        color: white;
+                        font-family: $latoBold;
+                        border-radius: 4px;
+                        height: 80px;
+                        width: 237px;
+                        font-size: 40px;
+                        cursor: pointer;
+                        transition: background-color 0.2s;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: unset;
+                            border: 1px solid #f3b63a;
+                            transition: background-color 0.2s;
+                        }
+                        @media (max-width: $xs) {
+                            font-size: 20px;
+                            height: 40px;
+                            width: 50%;
+                            display: block;
+                            margin-left: auto;
+                        }
+                        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+                            font-size: 20px;
+                            height: 40px;
+                            width: 50%;
+                            display: block;
+                            margin-left: auto;
+                        }
+                        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+                            font-size: 20px;
+                            height: 40px;
+                            width: 50%;
+                            display: block;
+                            margin-left: auto;
+                        }
+                        @media (min-width: $md) and (max-width: $lgBreakpoint) {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        @media screen and (min-width: $xs) and (max-width: $landScapePortrait) and (orientation: landscape) {
+                            font-size: 18px;
+                            height: 28px;
+                            width: 30%;
+                            display: block;
+                            margin-top: -20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
