@@ -11,7 +11,6 @@ class SkillsController extends Controller
     // Pobieranie wszystkich umiejętności
     public function getSkills()
     {
-        return 'AHA';
         $skills = Skill::all();
         return $skills;
     }
@@ -20,7 +19,8 @@ class SkillsController extends Controller
     // Pobieranie umiejętności na podstawie danej kategorii
     public function getSkillsByCategory($category)
     {
-
+        $skills = Skill::where('category', $category)->get();
+        return $skills;
     }
 
     // Tylko admin

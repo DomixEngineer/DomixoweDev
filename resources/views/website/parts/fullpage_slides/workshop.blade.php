@@ -5,30 +5,30 @@
         </div>
         <div class="workshop-categories">
             <ul class="workshop-categories-menu">
-                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'all'  }" @click="setCategoryWithLoading('all')">
+                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'all'  }" @click="getSkills()">
                     <p class="workshop-categories-menu-singleCategory-category">WSZYSTKO</p>
                 </li>
-                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'front'  }" @click="setCategoryWithLoading('front')">
+                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'front'  }" @click="getSkillsByCategory('front')">
                     <p class="workshop-categories-menu-singleCategory-category">FRONT-END</p>
                 </li>
-                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'back'  }" @click="setCategoryWithLoading('back')">
+                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'back'  }" @click="getSkillsByCategory('back')">
                     <p class="workshop-categories-menu-singleCategory-category">BACK-END</p>
                 </li>
-                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'tools'  }" @click="setCategoryWithLoading('tools')">
-                    <p class="workshop-categories-menu-singleCategory-category">NARZEDZIA</p>
+                <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'tools'  }" @click="getSkillsByCategory('tools')">
+                    <p class="workshop-categories-menu-singleCategory-category">NARZĘDZIA</p>
                 </li>
             </ul>
         </div>
         <template v-if="loading">
-            <div class="loader">
+            <div class="loader"></div>
         </template>
         <div class="workshop-skills">
             <template v-if="!loading">
-                <div v-for="skill in selectedCategoryItems" class="workshop-skills-singleSkill">
+                <div v-for="skill in skills" class="workshop-skills-singleSkill">
                     <div class="workshop-skills-singleSkill-till">
-                        <img :src="skill.image" class="workshop-skills-singleSkill-till-image" :alt="skill.alt">
+                        <img :src="skill.icon_url" class="workshop-skills-singleSkill-till-image" :alt="skill.description">
                     </div>
-                    <p class="workshop-skills-singleSkill-title">${ skill.title }</p>
+                    <p class="workshop-skills-singleSkill-title">${ skill.name }</p>
                 </div>
             </template>
         </div>

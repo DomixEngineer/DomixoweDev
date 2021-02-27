@@ -39,12 +39,11 @@
                                 <input 
                                 class="contact-container-right-form-row-input long" 
                                 placeholder="Imię"
-                                v-model="formData[0].field.value"
+                                v-model="formData.name"
                                 >
                                 <p 
                                 class="contact-container-right-form-row-error" 
                                 id="form-name"
-                                v-if="formData[0].field.hasError"
                                 >UZUPEŁNIJ WYMAGANE POLE
                                 </p>
                             </div>
@@ -54,12 +53,11 @@
                                 <input 
                                 class="contact-container-right-form-row-input short" 
                                 placeholder="Nr. tel"
-                                v-model="formData[1].field.value"
+                                v-model="formData.phoneNumber"
                                 >
                                 <p 
                                 class="contact-container-right-form-row-error" 
                                 id="form-phone"
-                                v-if="formData[1].field.hasError"
                                 >NIEPOPRAWNY NUMER
                                 </p>
                             </div>
@@ -67,12 +65,11 @@
                                 <input 
                                 class="contact-container-right-form-row-input short" 
                                 placeholder="E-mail"
-                                v-model="formData[2].field.value"
+                                v-model="formData.email"
                                 >
                                 <p 
                                 class="contact-container-right-form-row-error" 
                                 id="form-mail"
-                                v-if="formData[2].field.hasError"
                                 >NIEPOPRAWNY EMAIL
                                 </p>
                             </div>
@@ -82,12 +79,11 @@
                                 <textarea 
                                 class="contact-container-right-form-row-input" 
                                 placeholder="Wiadomość"
-                                v-model="formData[3].field.value"
+                                v-model="formData.message"
                                 ></textarea>
                                 <p 
                                 class="contact-container-right-form-row-error" 
                                 id="form-message"
-                                v-if="formData[3].field.hasError"
                                 >
                                 UZUPEŁNIJ WYMAGANE POLE
                                 </p>
