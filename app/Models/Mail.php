@@ -9,4 +9,5 @@ class Mail extends Model
 {
     use HasFactory;
     protected $table = 'mailings';
+    protected $fillable = ['options', 'group', 'state'];
 }

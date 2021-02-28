@@ -19,16 +19,38 @@ var app = new Vue({
 		selectedCategoryItems: [],
 		selectedCategory: 'all',
 		loading: false,
-		formData: {},
+		formData: {
+			name: '',
+			phoneNumber: '',
+			email: '',
+			message: ''
+		},
 		formErrors: {},
-		canSendForm: false
+		formSended: false
 	},
 	el: '#fullpage',
 	methods: {
 		submitForm()
 		{
 			var vm = this;
-			console.log('Wysyłam formularz', vm.formData);
+			axios.post('http://10.0.0.10/api/contact', vm.formData)
+				.then(function(data) {
+					if (data.status == 201)
+					{
+						vm.formErrors = {};
+						vm.formSended = true;
+					}
+				})
+				.catch(function(error) {
+					if (error.response)
+					{
+						vm.formErrors = error.response.data.errors;
+					}
+					else
+					{
+						vm.formErrors = {};
+					}
+				});
 		},
 		getSkills() {
 			var vm = this;
@@ -104,7 +126,6 @@ var fullpage = new fullpage('#fullpage', {
 	cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
 
 	onLeave: function(origin, destination, direction){
-		console.log(destination.anchor);
 		if (destination.anchor == 'about' || destination.anchor == 'workshop')
 		{
 			menuColorChanger('black');

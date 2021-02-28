@@ -33,68 +33,83 @@
                     </p>
                 </div>
                 <div class="contact-container-right">
-                    <form class="contact-container-right-form" v-on:submit.prevent="submitForm">
-                        <div class="contact-container-right-form-row">
-                            <div class="long-col">
-                                <input 
-                                class="contact-container-right-form-row-input long" 
-                                placeholder="Imię"
-                                v-model="formData.name"
-                                >
-                                <p 
-                                class="contact-container-right-form-row-error" 
-                                id="form-name"
-                                >UZUPEŁNIJ WYMAGANE POLE
-                                </p>
+                    <template v-if="!formSended">
+                        <form class="contact-container-right-form" v-on:submit.prevent="submitForm">
+                            <div class="contact-container-right-form-row">
+                                <div class="long-col">
+                                    <input 
+                                    class="contact-container-right-form-row-input long" 
+                                    placeholder="Imię"
+                                    v-model="formData.name"
+                                    >
+                                    <p 
+                                    class="contact-container-right-form-row-error" 
+                                    id="form-name"
+                                    v-if="formErrors.name"
+                                    >
+                                    ${ formErrors.name[0] }
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-container-right-form-row">
-                            <div class="short-col">
-                                <input 
-                                class="contact-container-right-form-row-input short" 
-                                placeholder="Nr. tel"
-                                v-model="formData.phoneNumber"
-                                >
-                                <p 
-                                class="contact-container-right-form-row-error" 
-                                id="form-phone"
-                                >NIEPOPRAWNY NUMER
-                                </p>
+                            <div class="contact-container-right-form-row">
+                                <div class="short-col">
+                                    <input 
+                                    class="contact-container-right-form-row-input short" 
+                                    placeholder="Nr. tel"
+                                    v-model="formData.phoneNumber"
+                                    >
+                                    <p 
+                                    class="contact-container-right-form-row-error" 
+                                    id="form-phone"
+                                    v-if="formErrors.phoneNumber"
+                                    >
+                                    ${ formErrors.phoneNumber[0] }
+                                    </p>
+                                </div>
+                                <div class="short-col">
+                                    <input 
+                                    class="contact-container-right-form-row-input short" 
+                                    placeholder="E-mail"
+                                    v-model="formData.email"
+                                    >
+                                    <p 
+                                    class="contact-container-right-form-row-error" 
+                                    id="form-mail"
+                                    v-if="formErrors.email"
+                                    >
+                                    ${ formErrors.email[0] }
+                                    </p>
+                                </div>
                             </div>
-                            <div class="short-col">
-                                <input 
-                                class="contact-container-right-form-row-input short" 
-                                placeholder="E-mail"
-                                v-model="formData.email"
-                                >
-                                <p 
-                                class="contact-container-right-form-row-error" 
-                                id="form-mail"
-                                >NIEPOPRAWNY EMAIL
-                                </p>
+                            <div class="contact-container-right-form-row">
+                                <div class="long-col">
+                                    <textarea 
+                                    class="contact-container-right-form-row-input" 
+                                    placeholder="Wiadomość"
+                                    v-model="formData.message"
+                                    ></textarea>
+                                    <p 
+                                    class="contact-container-right-form-row-error" 
+                                    id="form-message"
+                                    v-if="formErrors.message"
+                                    >
+                                    ${ formErrors.message[0] }
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-container-right-form-row">
-                            <div class="long-col">
-                                <textarea 
-                                class="contact-container-right-form-row-input" 
-                                placeholder="Wiadomość"
-                                v-model="formData.message"
-                                ></textarea>
-                                <p 
-                                class="contact-container-right-form-row-error" 
-                                id="form-message"
-                                >
-                                UZUPEŁNIJ WYMAGANE POLE
-                                </p>
+                            <div class="contact-container-right-form-row">
+                                <div class="long-col">
+                                    <button class="contact-container-right-form-row-sendBtn">WYŚLIJ</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-container-right-form-row">
-                            <div class="long-col">
-                                <button class="contact-container-right-form-row-sendBtn">WYŚLIJ</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </template>
+                    <template v-else>
+                        <h1 class="contact-container-right-thankyou">
+                            Dziękuję bardzo za wiadomość, <br>
+                            odpiszę tak szybko jak to możliwe. ;)
+                        </h1>
+                    </template>
                 </div>
             </div>
         </div>
