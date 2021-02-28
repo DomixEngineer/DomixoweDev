@@ -17,8 +17,8 @@
         <div class="about-right">
             <div class="about-right-top">
                 <h1 class="about-right-top-header">
-                Kim jestem i<br>
-                <b>DZIEŃ DOBRY</b>
+                {{ translate('landingpage.secondslide.whoami') }}<br>
+                <b>{{ translate('landingpage.secondslide.hello') }}</b>
                 </h1>
             </div>
             <div class="about-right-bottom">
@@ -26,15 +26,18 @@
                 Programista “<b>Fullstack developer</b>” z pasji, posiadam obecnie trzyletnie doświadczenie 
                 komercyjne w branży informatycznej. Aktualnie <b>studiuję także informatykę</b> na uczelni 
                 “Wyższa Szkoła Bankowa” w Chorzowie, uczę się w trybie zaocznym i znajduję się na 
-                ostatnim roku studiów (inżynier).
+                ostatnim roku studiów (studia inżynierskie).
                 </p>
                 <p class="about-right-bottom-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                culpa qui officia deserunt mollit anim id est laborum.
+                Swoją przygodę z programowaniem rozpocząłem ponad 10 lat temu pisząc proste "moduły"
+                na system Commodore64 (język BASIC). <br>
+                W swojej ścieżce zawodowej przewinąłem się już przez wiele różnych języków (C++, C#, Java) itp..
+                Lecz aktualnie w obecnej chwili jestem fullstack developerem opierającym się głównie na takich
+                technologiach jak PHP, SQL, JavaScript, różnego rodzaju silniki sklepowe, systemy CMS / CRM i wiele
+                innych.
+                </p>
+                <p class="about-right-bottom-text">
+                Osoby zainteresowane mą personą oraz partnerów biznesowych zapraszam do sekcji kontaktu.
                 </p>
             </div>
         </div>

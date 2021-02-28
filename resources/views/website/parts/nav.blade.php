@@ -2,6 +2,8 @@
 <div class="navbar desktop" id="desktopNav">
     <div class="navbar-left">
         <img src="{{ asset('assets/images/main/domixowe-logo.png') }}" class="site-logo" alt="domixowe.dev - Twój developer IT">
+        <img src="{{ asset('assets/images/flags/pl.png') }}" class="site-langIcon">
+        <img src="{{ asset('assets/images/flags/en.png') }}" class="site-langIcon">
     </div>
     <div class="navbar-right">
         <ul class="menu">
