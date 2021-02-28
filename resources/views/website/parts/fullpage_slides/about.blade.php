@@ -23,10 +23,12 @@
             </div>
             <div class="about-right-bottom">
                 <p class="about-right-bottom-text">
-                Programista “<b>Fullstack developer</b>” z pasji, posiadam obecnie trzyletnie doświadczenie 
+                <!-- Programista “<b>Fullstack developer</b>” z pasji, posiadam obecnie trzyletnie doświadczenie 
                 komercyjne w branży informatycznej. Aktualnie <b>studiuję także informatykę</b> na uczelni 
                 “Wyższa Szkoła Bankowa” w Chorzowie, uczę się w trybie zaocznym i znajduję się na 
-                ostatnim roku studiów (studia inżynierskie).
+                ostatnim roku studiów (studia inżynierskie). -->
+                {{ translate('landingpage.secondslide.firstRow.programmer') }} <b> "Fullstack developer" </b>
+                
                 </p>
                 <p class="about-right-bottom-text">
                 Swoją przygodę z programowaniem rozpocząłem ponad 10 lat temu pisząc proste "moduły"
