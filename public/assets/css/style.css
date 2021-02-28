@@ -96,6 +96,7 @@
 .navbar-right .menu .menu-item-link {
   color: white;
   text-decoration: none !important;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1199px) {

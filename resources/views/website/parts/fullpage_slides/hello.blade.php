@@ -2,7 +2,7 @@
     <div class="mainContainer">
         <div class="start-left">
             <p class="start-left-sentence">
-                Nazywam się<br>
+                {{ translate('landingpage.firstslide.mynameis') }}<br>
                 <b>Dominik Dziewulski</b>
             </p>
             <div class="start-left-role">

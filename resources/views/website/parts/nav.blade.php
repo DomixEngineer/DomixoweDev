@@ -10,16 +10,16 @@
                 <a href="#start" class="menu-item-link">'START',</a>
             </li>
             <li data-menuanchor="about" class="menu-item">
-                <a href="#about" class="menu-item-link">'O MNIE',</a>
+                <a href="#about" class="menu-item-link">'{{ translate('landingpage.nav.about') }}',</a>
             </li>
             <li data-menuanchor="workshop" class="menu-item">
-                <a href="#workshop" class="menu-item-link">'WARSZTAT',</a>
+                <a href="#workshop" class="menu-item-link">'{{ translate('landingpage.nav.workshop') }}',</a>
             </li>
             <li data-menuanchor="experience" class="menu-item">
-                <a href="#experience" class="menu-item-link">'DOŚWIADCZENIE',</a>
+                <a href="#experience" class="menu-item-link">'{{ translate('landingpage.nav.experience') }}',</a>
             </li>
             <li data-menuanchor="contact" class="menu-item">
-                <a href="#contact" class="menu-item-link">'KONTAKT'</a>
+                <a href="#contact" class="menu-item-link">'{{ translate('landingpage.nav.contact') }}'</a>
             </li>
             <span class="menu-open">]</span>
         </ul>
