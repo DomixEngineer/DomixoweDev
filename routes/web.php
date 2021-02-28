@@ -2,12 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TranslatorController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\AdminController;
 
 // Widok strony głównej
-Route::get('/', function() {
-    return view('website.index');
-})->name('landing-page');
+Route::get('/', [LandingPageController::class, 'indexPage'])->name('landing-page');
 
 // Strona logowania
 Route::get('/admin/login', function() {
