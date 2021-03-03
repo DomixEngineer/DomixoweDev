@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use App\Objects\AuthManager;
 
 class AdminMiddleware
 {
@@ -16,7 +17,8 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if ( isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == true )
+        $authManager = new AuthManager();
+        if ($authManager->checkLoginSession())
         {
             return $next($request);
         }

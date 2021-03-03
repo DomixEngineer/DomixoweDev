@@ -18,4 +18,7 @@ const mix = require('laravel-mix');
 
 // Kompilacja SCSS
 mix.sass('resources/scss/style.scss', 'public/assets/css');
+mix.sass('resources/scss/admin-login.scss', 'public/assets/css');
+mix.sass('resources/scss/admin-panel.scss', 'public/assets/css');
+
 mix.js('resources/js/app.js', 'public/assets/js');

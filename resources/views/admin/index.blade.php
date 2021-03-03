@@ -1,1 +1,2 @@
-<h1>Panel administracyjny</h1>
+@include('admin.parts.header')
+@include('admin.parts.footer')

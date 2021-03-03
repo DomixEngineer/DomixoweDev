@@ -1,0 +1,57 @@
+html, body {
+  background-image: url("/assets/images/main/blue-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login {
+  background-color: white;
+  width: 320px;
+  height: 470px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 30px;
+}
+.login-header {
+  text-align: center;
+  font-size: 21px;
+}
+.login-form {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.login-form-row {
+  margin-bottom: 30px;
+  display: block;
+}
+.login-form-row-form_group-label {
+  display: block;
+}
+.login-form-row-form_group-input {
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.login-form-row-form_group-login_button {
+  background-color: #1B98F5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
