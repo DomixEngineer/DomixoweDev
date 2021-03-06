@@ -2,8 +2,12 @@
 <div class="navbar desktop" id="desktopNav">
     <div class="navbar-left">
         <img src="{{ asset('assets/images/main/domixowe-logo.png') }}" class="site-logo" alt="domixowe.dev - Twój developer IT">
-        <img src="{{ asset('assets/images/flags/pl.png') }}" class="site-langIcon">
-        <img src="{{ asset('assets/images/flags/en.png') }}" class="site-langIcon">
+        <a href="http://10.0.0.10/language-set/PL">
+            <img src="{{ asset('assets/images/flags/pl.png') }}" class="site-langIcon">
+        </a>
+        <a href="http://10.0.0.10/language-set/EN">
+            <img src="{{ asset('assets/images/flags/en.png') }}" class="site-langIcon">
+        </a>
     </div>
     <div class="navbar-right">
         <ul class="menu">

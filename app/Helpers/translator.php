@@ -1,18 +1,20 @@
 <?php
 
     use App\Http\Controllers\TranslatorController;
+    use App\Http\Controllers\LanguageController;
 
     // Funkcja do tłumaczenia na podstawie klucza translacyjnego
     function translate($translateKey)
     {
+        $langController = new LanguageController;
+
         $lang = determinateBrowserLang();
-        $langSettings = checkIfLangWasSetted();
         $finalLangSetting = 'PL';
         
         // Jezeli user ma juz ustawiony swój język jaki chce mieć
-        if ( checkIfLangWasSetted() )
+        if ( checkIfLangWasSetted($langController) )
         {
-            $userLang = getSettingLang();
+            $userLang = getSettingLang($langController);
             if ($userLang == 'PL')
             {
                 // Tłumaczenie kluczy translacji po Polsku
@@ -50,13 +52,14 @@
     }
 
     // Sprawdzenie czy user sam sobie ustawił język (poprzez klik w flagę)
-    function checkIfLangWasSetted()
+    function checkIfLangWasSetted(LanguageController $langController)
     {
-        return isset($_SESSION['lang_setting']);
+        return $langController->checkIfLangSetted();
     }
 
-    function getSettingLang()
+    // Sprawdzenie ustawień języka w sesji
+    function getSettingLang(LanguageController $langController)
     {
-        return $_SESSION['lang_setting'];
+        return $langController->getLanguage();
     }
 ?>

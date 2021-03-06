@@ -1,12 +1,12 @@
 <section class="section workshop" data-anchor="workshop">   
     <div class="mainContainer">
         <div class="workshop-heading">
-            <h1 class="workshop-heading-header">MÓJ WARSZTAT</h1>
+            <h1 class="workshop-heading-header">{{ translate('landingpage.thirdslide.myWorkshop') }}</h1>
         </div>
         <div class="workshop-categories">
             <ul class="workshop-categories-menu">
                 <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'all'  }" @click="getSkills()">
-                    <p class="workshop-categories-menu-singleCategory-category">WSZYSTKO</p>
+                    <p class="workshop-categories-menu-singleCategory-category">{{ translate('landingpage.thirdslide.all') }}</p>
                 </li>
                 <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'front'  }" @click="getSkillsByCategory('front')">
                     <p class="workshop-categories-menu-singleCategory-category">FRONT-END</p>
@@ -15,7 +15,7 @@
                     <p class="workshop-categories-menu-singleCategory-category">BACK-END</p>
                 </li>
                 <li class="workshop-categories-menu-singleCategory" :class="{ 'active' : selectedCategory == 'tools'  }" @click="getSkillsByCategory('tools')">
-                    <p class="workshop-categories-menu-singleCategory-category">NARZĘDZIA</p>
+                    <p class="workshop-categories-menu-singleCategory-category">{{ translate('landingpage.thirdslide.tools') }}</p>
                 </li>
             </ul>
         </div>

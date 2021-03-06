@@ -9,9 +9,9 @@
                 </div>
                 <div class="experience-company-right">
                     <h1 class="experience-company-right-companyTitle">MaxSote</h1>
-                    <p class="experience-company-right-singleData">Stanowisko: <b>Praktykant</b></p>
-                    <p class="experience-company-right-singleData">Czas trwania: <b>Miesiąc</b></p>
-                    <p class="experience-company-right-singleData">Lokalizacja: <b>Bytom</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.position') }}: <b>Praktykant</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.duration') }}: <b>Miesiąc</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.localisation') }}: <b>Bytom</b></p>
                 </div>
             </div>
         </div>
@@ -26,9 +26,9 @@
                 </div>
                 <div class="experience-company-right">
                     <h1 class="experience-company-right-companyTitle">ARRIS</h1>
-                    <p class="experience-company-right-singleData">Stanowisko: <b>Fullstack Developer</b></p>
-                    <p class="experience-company-right-singleData">Czas trwania: <b>1 rok i 4 miesiące</b></p>
-                    <p class="experience-company-right-singleData">Lokalizacja: <b>Chorzów</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.position') }}: <b>Fullstack Developer</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.duration') }}: <b>1 rok i 4 miesiące</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.localisation') }}: <b>Chorzów</b></p>
                 </div>
             </div>
         </div>
@@ -43,9 +43,9 @@
                 </div>
                 <div class="experience-company-right">
                     <h1 class="experience-company-right-companyTitle">Medforum</h1>
-                    <p class="experience-company-right-singleData">Stanowisko: <b>Fullstack developer</b></p>
-                    <p class="experience-company-right-singleData">Czas trwania: <b>6 miesięcy</b></p>
-                    <p class="experience-company-right-singleData">Lokalizacja: <b>Katowice</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.position') }}: <b>Fullstack developer</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.duration') }}: <b>6 miesięcy</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.localisation') }}: <b>Katowice</b></p>
                 </div>
             </div>
         </div>
@@ -60,9 +60,9 @@
                 </div>
                 <div class="experience-company-right">
                     <h1 class="experience-company-right-companyTitle">LINKHOUSE</h1>
-                    <p class="experience-company-right-singleData">Stanowisko: <b>Fullstack Developer</b></p>
-                    <p class="experience-company-right-singleData">Czas trwania: <b>1 rok i 1 miesiąc, obecnie</b></p>
-                    <p class="experience-company-right-singleData">Lokalizacja: <b>Katowice</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.position') }}: <b>Fullstack Developer</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.duration') }}: <b>1 rok i 1 miesiąc, obecnie</b></p>
+                    <p class="experience-company-right-singleData">{{ translate('landingpage.fourthslide.localisation') }}: <b>Katowice</b></p>
                 </div>
             </div>
         </div>

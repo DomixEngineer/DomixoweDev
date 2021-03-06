@@ -660,6 +660,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 @media (max-width: 320px) {
   .workshop-heading-header {
@@ -796,6 +798,7 @@
   padding-right: 15px;
   transform: scale(1);
   transition: transform 0.5s;
+  text-transform: uppercase;
 }
 @media (max-width: 320px) {
   .workshop-categories-menu-singleCategory {
