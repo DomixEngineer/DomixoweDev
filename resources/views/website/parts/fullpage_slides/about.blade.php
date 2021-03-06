@@ -28,15 +28,18 @@
                 “Wyższa Szkoła Bankowa” w Chorzowie, uczę się w trybie zaocznym i znajduję się na 
                 ostatnim roku studiów (studia inżynierskie). -->
                 {{ translate('landingpage.secondslide.firstRow.programmer') }} <b> "Fullstack developer" </b>
+                {{ translate('landingpage.secondslide.firstRow.passion') }}
+                {{ translate('landingpage.secondslide.firstRow.studies') }}
                 
                 </p>
                 <p class="about-right-bottom-text">
-                Swoją przygodę z programowaniem rozpocząłem ponad 10 lat temu pisząc proste "moduły"
+                {{ translate('landingpage.secondslide.firstRow.myhistory') }}
+                <!-- Swoją przygodę z programowaniem rozpocząłem ponad 10 lat temu pisząc proste "moduły"
                 na system Commodore64 (język BASIC). <br>
                 W swojej ścieżce zawodowej przewinąłem się już przez wiele różnych języków (C++, C#, Java) itp..
                 Lecz aktualnie w obecnej chwili jestem fullstack developerem opierającym się głównie na takich
                 technologiach jak PHP, SQL, JavaScript, różnego rodzaju silniki sklepowe, systemy CMS / CRM i wiele
-                innych.
+                innych. -->
                 </p>
                 <p class="about-right-bottom-text">
                 Osoby zainteresowane mą personą oraz partnerów biznesowych zapraszam do sekcji kontaktu.

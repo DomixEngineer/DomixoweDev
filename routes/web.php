@@ -26,4 +26,13 @@ Route::get('/admin', function() {
     return redirect()->route('admin-login');
 });
 
-Route::get('/admin/panel/{module?}', [AdminController::class, 'indexPage'])->middleware('admin')->name('admin-panel');
+Route::get('/admin/panel/{module?}', function($module = null) {
+    if ($module == null)
+    {
+        $module = 'home';
+    }
+    return view('admin.index', [
+        'module' => $module,
+        'script' => 'assets/js/admin/' . $module . '.js'
+    ]);
+})->middleware('admin')->name('admin-panel');

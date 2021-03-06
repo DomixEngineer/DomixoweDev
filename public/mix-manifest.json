@@ -1,5 +1,6 @@
 {
     "/assets/js/app.js": "/assets/js/app.js",
+    "/assets/css/admin-panel.css": "/assets/css/admin-panel.css",
     "/assets/css/admin-login.css": "/assets/css/admin-login.css",
     "/assets/css/style.css": "/assets/css/style.css"
 }
