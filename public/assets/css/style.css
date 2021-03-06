@@ -1639,6 +1639,7 @@
   font-size: 40px;
   cursor: pointer;
   transition: background-color 0.2s;
+  text-transform: uppercase;
 }
 .contact-container-right-form-row-sendBtn:hover {
   cursor: pointer;

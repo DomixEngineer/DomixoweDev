@@ -39,9 +39,9 @@ class ContactController extends Controller
     public function validateWebForm(Request $request)
     {
         $customMessages = [
-            'required' => 'Te pole jest wymagane',
-            'email' => 'Podany adres email jest błędny',
-            'max' => 'Przekroczono limit znaków'
+            'required' => translate('landingpage.fifthslide.contact.requiredFieldError'),
+            'email' => translate('landingpage.fifthslide.contact.wrongEmail'),
+            'max' => translate('landingpage.fifthslide.contact.charactersError')
         ];
 
         return $request->validate([

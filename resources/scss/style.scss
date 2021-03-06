@@ -1335,6 +1335,7 @@ $landScapePortrait: 830px;
                         font-size: 40px;
                         cursor: pointer;
                         transition: background-color 0.2s;
+                        text-transform: uppercase;
                         &:hover {
                             cursor: pointer;
                             background-color: unset;

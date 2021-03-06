@@ -2,11 +2,11 @@
     <div class="blockAlignCenter">
         <div class="mainContainer">
             <div class="contact-heading">
-                <h2 class="contact-heading-header">Kontakt</h2>
+                <h2 class="contact-heading-header">{{ translate('landingpage.fifthslide.contact.header') }}</h2>
             </div>
             <div class="contact-container">
                 <div class="contact-container-left">
-                    <h4 class="contact-container-left-heading">Dane kontaktowe</h4>  
+                    <h4 class="contact-container-left-heading">{{ translate('landingpage.fifthslide.contact.contactData') }}</h4>  
                     <!-- <p class="contact-container-left-singleData">
                         <span class="contact-container-left-singleData-icon">
                             <img src="{{ asset('assets/images/main/phone-icon.png') }}" class="" alt="domixowe.dev numer kontnaktowy">
@@ -39,7 +39,7 @@
                                 <div class="long-col">
                                     <input 
                                     class="contact-container-right-form-row-input long" 
-                                    placeholder="Imię"
+                                    placeholder="{{ translate('landingpage.fifthslide.contact.name') }}"
                                     v-model="formData.name"
                                     >
                                     <p 
@@ -55,7 +55,7 @@
                                 <div class="short-col">
                                     <input 
                                     class="contact-container-right-form-row-input short" 
-                                    placeholder="Nr. tel"
+                                    placeholder="{{ translate('landingpage.fifthslide.contact.phoneNumber') }}"
                                     v-model="formData.phoneNumber"
                                     >
                                     <p 
@@ -85,7 +85,7 @@
                                 <div class="long-col">
                                     <textarea 
                                     class="contact-container-right-form-row-input" 
-                                    placeholder="Wiadomość"
+                                    placeholder="{{ translate('landingpage.fifthslide.contact.message') }}"
                                     v-model="formData.message"
                                     ></textarea>
                                     <p 
@@ -99,15 +99,14 @@
                             </div>
                             <div class="contact-container-right-form-row">
                                 <div class="long-col">
-                                    <button class="contact-container-right-form-row-sendBtn">WYŚLIJ</button>
+                                    <button class="contact-container-right-form-row-sendBtn">{{ translate('landingpage.fifthslide.contact.sendButton') }}</button>
                                 </div>
                             </div>
                         </form>
                     </template>
                     <template v-else>
                         <h1 class="contact-container-right-thankyou">
-                            Dziękuję bardzo za wiadomość, <br>
-                            odpiszę tak szybko jak to możliwe. ;)
+                            {{ translate('landingpage.fifthslide.contact.thanksMessage') }}
                         </h1>
                     </template>
                 </div>
