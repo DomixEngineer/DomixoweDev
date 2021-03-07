@@ -131,6 +131,25 @@ $landScapePortrait: 830px;
     }
 }
 
+.navbarMobile {
+    display: none;
+    position: fixed;
+    top: 2%;
+    z-index: 999;
+    &-bar {
+        img {
+            max-width: 30px;
+            position: relative;
+            left: 6px;
+            top: -6px;
+        }
+    }
+    @media (min-width: $xs) and (max-width: $lg)
+    {
+        display: block;
+    } 
+}
+
 .navbar.desktop {
     @media (max-width: $lgBreakpoint)
     {
@@ -278,7 +297,7 @@ $landScapePortrait: 830px;
                 bottom: -2vh;
             }
             @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
-                max-width: 300px;
+                max-width: 270px;
                 width: 100%;
                 bottom: -2vh;
             }
@@ -306,6 +325,18 @@ $landScapePortrait: 830px;
 
 .about {
     background-color: #dae0e2;
+    .blockAlignment {
+        @media (min-width: $xsBreakpoint) and (max-width: $smBreakpoint) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (min-width: $sm) and (max-width: $mdBreakpoint) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
     .mainContainer {
         display: flex;
         align-items: center;
@@ -727,9 +758,10 @@ $landScapePortrait: 830px;
         max-width: 822px;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(5, 20%);
+        grid-template-columns: repeat(6, 20%);
         margin-left: auto;
         margin-right: auto;
+        overflow-x: scroll;
         @media (max-width: $xs) {
             max-width: 90%;
             overflow: auto;
@@ -754,7 +786,7 @@ $landScapePortrait: 830px;
             margin-left: auto;
             margin-right: auto;
             grid-column-gap: 0%;
-            grid-template-columns: repeat(10, 25%);
+            grid-template-columns: repeat(12, 25%);
             margin-top: 24px;
         }
         &-singleSkill {
@@ -1045,7 +1077,7 @@ $landScapePortrait: 830px;
             }
             &::after {
                 content: '';
-                // background-image: url('../images/light-icon.png');
+                background-image: url('/assets/images/main/light-icon.png');
                 background-repeat: no-repeat;
                 position: absolute;
                 right: -70px;

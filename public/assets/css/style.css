@@ -105,6 +105,24 @@
   text-transform: uppercase;
 }
 
+.navbarMobile {
+  display: none;
+  position: fixed;
+  top: 2%;
+  z-index: 999;
+}
+.navbarMobile-bar img {
+  max-width: 30px;
+  position: relative;
+  left: 6px;
+  top: -6px;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .navbarMobile {
+    display: block;
+  }
+}
+
 @media (max-width: 1199px) {
   .navbar.desktop {
     display: none;
@@ -286,7 +304,7 @@
 }
 @media (min-width: 321px) and (max-width: 479px) {
   .start-right-person {
-    max-width: 300px;
+    max-width: 270px;
     width: 100%;
     bottom: -2vh;
   }
@@ -316,6 +334,20 @@
 
 .about {
   background-color: #dae0e2;
+}
+@media (min-width: 321px) and (max-width: 479px) {
+  .about .blockAlignment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .about .blockAlignment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .about .mainContainer {
   display: flex;
@@ -861,9 +893,10 @@
   max-width: 822px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: repeat(6, 20%);
   margin-left: auto;
   margin-right: auto;
+  overflow-x: scroll;
 }
 @media (max-width: 320px) {
   .workshop-skills {
@@ -894,7 +927,7 @@
     margin-left: auto;
     margin-right: auto;
     grid-column-gap: 0%;
-    grid-template-columns: repeat(10, 25%);
+    grid-template-columns: repeat(12, 25%);
     margin-top: 24px;
   }
 }
@@ -1269,6 +1302,7 @@
 }
 .contact-heading-header::after {
   content: "";
+  background-image: url("/assets/images/main/light-icon.png");
   background-repeat: no-repeat;
   position: absolute;
   right: -70px;

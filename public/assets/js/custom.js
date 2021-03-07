@@ -71,6 +71,9 @@ var app = new Vue({
 					vm.skills = data.data;
 					vm.loading = false;
 				});
+		},
+		toggleNavMobileMenu() {
+			console.log('MENU TOGGLE');
 		}
 	},
 	mounted: function() {

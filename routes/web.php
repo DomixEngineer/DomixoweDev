@@ -34,6 +34,12 @@ Route::get('/admin', function() {
 });
 
 Route::get('/admin/panel/{module?}', function($module = null) {
+    if ($module == 'loggout')
+    {
+        $authManager = new AuthManager;
+        $authManager->destroyLoginSession();
+        return redirect()->route('landing-page');
+    }
     if ($module == null)
     {
         $module = 'home';

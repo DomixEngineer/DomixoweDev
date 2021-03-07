@@ -35,5 +35,10 @@
 
 <!-- MOBILE NAVBAR -->
 <div class="navbarMobile" id="mobileNav">
+    <div class="navbarMobile-bar">
+        <img src="{{ asset('assets/images/main/hamburger-icon.png') }}" @click="toggleNavMobileMenu()" />
+    </div>
+    <div class="navbarMobile-sidebar">
+    </div>
 </div>
 <!-- / MOBILE NAVBAR -->
