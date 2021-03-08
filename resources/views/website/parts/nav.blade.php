@@ -77,4 +77,6 @@
         </div>
     </div>
 </div>
+<div class="mobileNavBackground hidden" id="mobileBg">
+</div>
 <!-- / MOBILE NAVBAR -->

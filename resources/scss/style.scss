@@ -152,6 +152,7 @@ $landScapePortrait: 830px;
         top: 0;
         left: 0vh;
         transition: left 0.5s;
+        max-width: 350px;
         &-logoPart {
             &-logo {
                 display: block;
@@ -160,6 +161,7 @@ $landScapePortrait: 830px;
                 margin-left: auto;
                 margin-right: auto;
                 padding-bottom: 30px;
+                max-width: 300px;
             }
         }
         &-languagePart {
@@ -184,14 +186,24 @@ $landScapePortrait: 830px;
         }
     }
     &-sidebar.hidden {
-        left: -50vh;
+        left: -70vh;
         transition: left 0.5s;
     }
     @media (min-width: $xs) and (max-width: $lg)
     {
         display: block;
     }
-
+}
+.mobileNavBackground {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    z-index: 100;
+    display: block;
+}
+.mobileNavBackground.hidden {
+    display: none;
 }
 
 .navbar.desktop {

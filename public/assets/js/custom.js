@@ -12,30 +12,42 @@ function logoSrcChanger(src) {
 	logo.src = src;
 }
 
-
-// Podstawowe operacji na nawigacji mobilnej
-var hamburgerElement = document.getElementById('hamburgerIcon');
-var sidebarElement = document.getElementById('navbarSidebarMobile');
-hamburgerElement.addEventListener('click', function(event) {
+// Wysuwanie / wsuwanie sidebara mobilnego
+function sidebarToggler(sidebarElement, BgElement) {
 	var isHidden = sidebarElement.classList.contains('hidden');
 	if (isHidden)
 	{
 		sidebarElement.classList.remove('hidden');
+		BgElement.classList.remove('hidden');
 	}
 	else
 	{
 		sidebarElement.classList.add('hidden');
+		BgElement.classList.add('hidden');
 	}
+}
+
+
+// Podstawowe operacji na nawigacji mobilnej
+var hamburgerElement = document.getElementById('hamburgerIcon');
+var sidebarElement = document.getElementById('navbarSidebarMobile');
+var mobileBackground = document.getElementById('mobileBg');
+
+hamburgerElement.addEventListener('click', function(event) {
+	sidebarToggler(sidebarElement, mobileBackground);
 });
 
 var mobileItemsElements = document.getElementsByClassName('navbarMobile-sidebar-navigationPart-nav-item');
 for (var x = 0; x < mobileItemsElements.length; x++)
 {
 	mobileItemsElements[x].addEventListener('click', function(event) {
-		sidebarElement.classList.add('hidden');
+		sidebarToggler(sidebarElement, mobileBackground);
 	});
 }
 
+mobileBackground.addEventListener('click', function(event) {
+	sidebarToggler(sidebarElement, mobileBackground);
+});
 // Koniec operacji na mobilkach
 
 var app = new Vue({
