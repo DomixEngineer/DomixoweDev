@@ -144,10 +144,54 @@ $landScapePortrait: 830px;
             top: -6px;
         }
     }
+    &-sidebar {
+        width: 50vw;
+        height: 100vh;
+        background: #03203C;
+        position: fixed;
+        top: 0;
+        left: 0vh;
+        transition: left 0.5s;
+        &-logoPart {
+            &-logo {
+                display: block;
+                width: 90%;
+                padding-top: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 30px;
+            }
+        }
+        &-languagePart {
+            display: flex;
+        }
+        &-navigationPart {
+            &-nav {
+                list-style-type: none;
+                padding-left: 16px;
+                &-item {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &-link {
+                        text-decoration: none;
+                        color: white;
+                        font-family: $latoRegular;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    &-sidebar.hidden {
+        left: -50vh;
+        transition: left 0.5s;
+    }
     @media (min-width: $xs) and (max-width: $lg)
     {
         display: block;
-    } 
+    }
+
 }
 
 .navbar.desktop {

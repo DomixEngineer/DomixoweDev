@@ -12,6 +12,32 @@ function logoSrcChanger(src) {
 	logo.src = src;
 }
 
+
+// Podstawowe operacji na nawigacji mobilnej
+var hamburgerElement = document.getElementById('hamburgerIcon');
+var sidebarElement = document.getElementById('navbarSidebarMobile');
+hamburgerElement.addEventListener('click', function(event) {
+	var isHidden = sidebarElement.classList.contains('hidden');
+	if (isHidden)
+	{
+		sidebarElement.classList.remove('hidden');
+	}
+	else
+	{
+		sidebarElement.classList.add('hidden');
+	}
+});
+
+var mobileItemsElements = document.getElementsByClassName('navbarMobile-sidebar-navigationPart-nav-item');
+for (var x = 0; x < mobileItemsElements.length; x++)
+{
+	mobileItemsElements[x].addEventListener('click', function(event) {
+		sidebarElement.classList.add('hidden');
+	});
+}
+
+// Koniec operacji na mobilkach
+
 var app = new Vue({
 	delimiters: ['${', '}'],
 	data: {
@@ -73,7 +99,6 @@ var app = new Vue({
 				});
 		},
 		toggleNavMobileMenu() {
-			console.log('MENU TOGGLE');
 		}
 	},
 	mounted: function() {
