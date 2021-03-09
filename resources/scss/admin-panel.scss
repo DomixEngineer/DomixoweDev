@@ -94,3 +94,43 @@ html, body { padding: 0; margin: 0;}
         }
     }
 }
+
+.container-messages {
+    .messages {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        &-container {
+            border: 1px solid black;
+            border-radius: 8px;
+            max-width: 400px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            align-self: center;
+            &-header {
+                background: #5DA3FA;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                &-heading {
+                    font-size: 21px;
+                    text-align: center;
+                    margin: 0;
+                    color: white;
+                }
+            }
+            &-body {
+                padding: 15px;
+                background-color: #CAD5E2;
+                &-content {
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
