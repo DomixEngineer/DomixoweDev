@@ -18,6 +18,12 @@
         "sass": "^1.32.8",
         "sass-loader": "^10.1.1",
         "vue": "^2.5.7",
-        "cross-env": "^5.1"
+        "cross-env": "^5.1",
+        "vue-loader": "^15.9.6",
+        "vue-router": "^3.5.1"
+    },
+    "dependencies": {
+        "vue-loader": "^15.9.6",
+        "vue-router": "^3.5.1"
     }
 }
