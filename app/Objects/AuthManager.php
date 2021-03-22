@@ -13,7 +13,8 @@
         // Zniszczenie sesji userowi
         public function destroyLoginSession()
         {
-            session_destroy();
+            session_start();
+            $_SESSION['is_logged_in'] = false;
         }
 
         // Sprawdzenie stanu logowania

@@ -129,6 +129,11 @@ $landScapePortrait: 830px;
             }
         }
     }
+    &-left {
+        a {
+            text-decoration: none;
+        }
+    }
 }
 
 .navbarMobile {

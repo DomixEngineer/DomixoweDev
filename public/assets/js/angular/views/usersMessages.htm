@@ -1,0 +1,27 @@
+<div class="module">
+    <h1 class="header">${ config.moduleTitle }</h1>
+    <hr>
+    <div class="selection">
+        <button 
+            class="selection-item"
+            ng-repeat="lang in languages"
+            ng-class="{ 'active' : config.selectedLanguage == lang.value }"
+            ng-click="getTranslations(lang.value)">${ lang.title }</button>
+    </div>
+    <div ng-if="config.loading">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+    <div class="languages" ng-if="!config.loading">
+        <div class="languages-block" ng-repeat="translation in translations">
+            <div class="languages-block-heading">
+                <h1 class="languages-block-heading-header">${ translation.translation_key }</h1>
+            </div>
+            <div class="languages-block-content">
+                <p class="languages-block-content-text">
+                    ${ translation.value }
+                </p>
+                <button class="languages-block-content-btn" ng-click="deleteTranslation(translation)">Usuń element</button>
+            </div>
+        </div>
+    </div>
+</div>

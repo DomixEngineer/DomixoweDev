@@ -104,6 +104,9 @@
   text-decoration: none !important;
   text-transform: uppercase;
 }
+.navbar-left a {
+  text-decoration: none;
+}
 
 .navbarMobile {
   display: none;

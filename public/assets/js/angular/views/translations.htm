@@ -1,0 +1,65 @@
+<div class="module">
+    <h1 class="header">${ config.moduleTitle }</h1>
+    <hr>
+    <div class="selection">
+        <button 
+            class="selection-item"
+            ng-repeat="lang in languages"
+            ng-class="{ 'active' : config.selectedLanguage == lang.value }"
+            ng-click="getTranslations(lang.value)">${ lang.title }</button>
+    </div>
+    <div ng-if="config.loading">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+    <div ng-if="!config.loading">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Klucz tłumaczenia</th>
+                <th scope="col">Wartość tłumaczenia</th>
+                <th scope="col">Język</th>
+                <th scope="col">Akcje</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="translation in translations" ng-dblclick="toggleEdit(translation)">
+                    <th scope="row">${ translation.id }</th>
+
+                    <!-- Normalny display -->
+                    <td ng-if="!translation.edit">${ translation.translation_key }</td>
+                    <td ng-if="!translation.edit">${ translation.value }</td>
+                    <td ng-if="!translation.edit">${ translation.language }</td>
+                    <!-- / Normalny display -->
+
+                    <!-- Edycja -->
+                    <td ng-if="translation.edit">
+                        <input type="text" class="form-control" ng-model="translation.translation_key">
+                    </td>
+                    <td ng-if="translation.edit">
+                        <textarea 
+                            class="form-control"
+                            type="text" 
+                            ng-model="translation.value"
+                        ></textarea>
+                    </td>
+                    <td ng-if="translation.edit">
+                        <select ng-model="translation.language">
+                            <option value='PL'>PL</option>
+                            <option value='EN'>EN</option>
+                        </select>
+                    </td>
+                    <!-- / Edycja -->
+
+                    <td>
+                        <button class="btn-sm btn-danger" ng-click="deleteTranslation(translation)">Usuń tłumaczenie</button>
+                        <div ng-if="translation.edit">
+                            <br>
+                            <button class="btn-sm btn-primary" ng-click="saveChanges(translation)">Zapisz zmiany</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

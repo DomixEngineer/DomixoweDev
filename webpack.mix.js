@@ -15,4 +15,4 @@ const mix = require('laravel-mix');
 mix.sass('resources/scss/style.scss', 'public/assets/css');
 mix.sass('resources/scss/admin-login.scss', 'public/assets/css');
 mix.sass('resources/scss/admin-panel.scss', 'public/assets/css');
-
+mix.sass('resources/scss/admin-angular.scss', 'public/assets/css');

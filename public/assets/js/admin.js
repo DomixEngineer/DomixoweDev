@@ -15,7 +15,7 @@ var app = new Vue({
 		submitForm()
 		{
 			var vm = this;
-			axios.post('http://10.0.0.10/api/admin/login', vm.formData)
+			axios.post('/api/admin/login', vm.formData)
 				.then(function(data) {
                     console.log(data);
 					if (data.data.code == 200)
@@ -23,7 +23,7 @@ var app = new Vue({
                         vm.isLoggedIn = true;
                         vm.loginError = false;
                         setTimeout(function() {
-                            window.location.replace("http://10.0.0.10/admin/panel");
+                            window.location.replace("/admin");
                         }, 2000);
 					}
 				})

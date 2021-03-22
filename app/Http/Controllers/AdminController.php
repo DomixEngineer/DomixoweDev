@@ -13,11 +13,13 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
 
+    // Strona główna
     public function indexPage()
     {
         return view('admin.index');
     }
 
+    // Logowanie się
     public function login(Request $request, StateManager $stateManager, AuthManager $authManager)
     {   
         $form = $request->all();
@@ -48,5 +50,11 @@ class AdminController extends Controller
                 return $stateManager->unauthorized();
             }
         }
+    }
+
+    // Wylogowanie się
+    public function logout(AuthManager $authManager)
+    {
+        $authManager->destroyLoginSession();
     }
 }

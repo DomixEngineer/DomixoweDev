@@ -33,19 +33,7 @@ Route::get('/admin', function() {
     return redirect()->route('admin-login');
 });
 
-Route::get('/admin/panel/{module?}', function($module = null) {
-    if ($module == 'loggout')
-    {
-        $authManager = new AuthManager;
-        $authManager->destroyLoginSession();
-        return redirect()->route('landing-page');
-    }
-    if ($module == null)
-    {
-        $module = 'home';
-    }
-    return view('admin.index', [
-        'module' => $module,
-        'script' => 'assets/js/admin/' . $module . '.js'
-    ]);
+// Panel administracyjny
+Route::get('/admin', function() {
+    return view('admin-angular.index');
 })->middleware('admin')->name('admin-panel');
