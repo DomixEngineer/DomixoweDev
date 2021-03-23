@@ -24,3 +24,15 @@ function setGlobalConfiguration($interpolateProvider) {
     $interpolateProvider.endSymbol('}');
 
 }
+
+// Funkcja pomocnicza
+function fakeLoopIterator(scope) {
+    var array = [];
+    for (var x = 0; x <= scope; x++) {
+        array.push(x);
+    }
+    return array;
+}
+
+// Injection funkcji pomocniczej
+DomixoweDev.value('fakeLoopIterator', fakeLoopIterator);

@@ -120,3 +120,7 @@ html, body {
 .admin-right .module .selection-item:focus {
   outline: none;
 }
+.admin-right .module .messages {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
